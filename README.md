@@ -28,4 +28,4 @@ python start.py run
 ```
 
 ## Guia de arquitetura
-TBD.
+TBD
