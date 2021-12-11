@@ -1,31 +1,30 @@
 # Warehouse Serivce
 
-## Visão geral
-Server-side de uma aplicação de controle de estoque.
+## Overview
+Server-side of an inventory control application.
 
-## Guia de execução
+## Execution guide
+
+### Dependencies
 - Python 3;
 - Pip;
 - Docker;
 - MongoDB;
 
-## Como executar?
-
-### Preparando ambiente
-
-Ambiente virtual:
+### Preparing environment
+Virtual environment:
 ```shell
 virtual env
 source venv/bin/activate
 ```
-Instalação
+Installation
 ```shell
 pip install -r requirements.txt
 ```
-Execução
+Execution
 ```shell
 python start.py run
 ```
 
-## Guia de arquitetura
+## Architecture guide
 TBD
