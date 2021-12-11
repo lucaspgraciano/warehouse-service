@@ -13,13 +13,17 @@ class Database:
 
     def connect(self):
         if self.connected is False:
-            logging.debug('Starting connection to database.')
+            logging.info('Starting connection to database.')
             self.client = MongoClient(self.settings.DATABASE_URL)
             self.db = self.client.warehouse
             self.connected = True
             logging.info('Database connected.')
+        return self
 
     def close(self):
         logging.info('Closing connection to database.')
         self.client.close()
         logging.info('Database disconnected.')
+
+
+database = Database()

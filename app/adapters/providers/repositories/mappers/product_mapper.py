@@ -13,7 +13,7 @@ class ProductMapper:
 
     @staticmethod
     def from_domain(product):
-        return {'oid': product.oid,
+        return {'oid': str(product.oid),
                 'name': product.name,
                 'amount': product.amount,
                 'value': product.value,

@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ```
 Execution
 ```shell
-python start.py run
+uvicorn start:server --reload
 ```
 
 ## Architecture guide
