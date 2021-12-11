@@ -12,11 +12,6 @@ Server-side of an inventory control application.
 - MongoDB;
 
 ### Preparing environment
-Virtual environment:
-```shell
-virtual env
-source venv/bin/activate
-```
 Installation
 ```shell
 pip install -r requirements.txt
