@@ -1,2 +1,3 @@
 from .find_all_products_usecase import FindAllProductsUsecase
+from .find_by_name_usecase import FindByNameUsecase
 from .insert_one_product_usecase import InsertOneProductUsecase

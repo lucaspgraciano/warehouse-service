@@ -1,6 +1,6 @@
 from app.application import database
 from app.adapters.providers import ProductsRepository
-from app.utils import DatetimeUtils
+from app.domain import FindByNameUsecase
 from app.domain import InsertOneProductUsecase
 
 
@@ -9,7 +9,6 @@ class InsertOneProductFactory:
     def create():
         connection = database.connect()
         repository = ProductsRepository(product_entity=connection.db.products)
-        datetime_utils = DatetimeUtils
-        usecase = InsertOneProductUsecase(products_repository=repository,
-                                          datetime_utils=datetime_utils)
+        find_by_name_usecase = FindByNameUsecase(products_repository=repository)
+        usecase = InsertOneProductUsecase(products_repository=repository, find_by_name_usecase=find_by_name_usecase)
         return usecase

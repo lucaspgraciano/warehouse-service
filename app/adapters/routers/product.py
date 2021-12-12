@@ -1,19 +1,12 @@
 from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
 from app.adapters.providers import ProductMapper
 from app.application.factories import FindAllProductsFactory, InsertOneProductFactory
+from .models import ProductModel
 
 api = APIRouter()
 
 find_all_products_usecase = FindAllProductsFactory.create()
 insert_one_product_usecase = InsertOneProductFactory.create()
-
-
-class ProductModel(BaseModel):
-    name: str
-    amount: int
-    value: float
-    expirationDate: str
 
 
 @api.get('/')
@@ -28,4 +21,4 @@ def post_product(data: ProductModel):
                                                           amount=data.amount,
                                                           value=data.value,
                                                           expiration_date=data.expirationDate)
-    return ProductMapper.from_domain(inserted_product), HTTPException(200)
+    return ProductMapper.from_domain(inserted_product), HTTPException(201)

@@ -4,7 +4,7 @@ from app.domain import Record
 class RecordMapper:
     @staticmethod
     def to_domain(record_dict):
-        return Record(oid=record_dict.get('oid'),
+        return Record(oid=record_dict.get('_id'),
                       type=record_dict.get('type'),
                       product_name=record_dict.get('productName'),
                       amount=record_dict.get('amount'),

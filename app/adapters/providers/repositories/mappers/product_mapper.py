@@ -4,7 +4,7 @@ from app.domain import Product
 class ProductMapper:
     @staticmethod
     def to_domain(product_dict):
-        return Product(oid=product_dict.get('oid'),
+        return Product(oid=product_dict.get('_id'),
                        name=product_dict.get('name'),
                        amount=product_dict.get('amount'),
                        value=product_dict.get('value'),
@@ -13,7 +13,7 @@ class ProductMapper:
 
     @staticmethod
     def from_domain(product):
-        return {'oid': str(product.oid),
+        return {'_id': str(product.oid),
                 'name': product.name,
                 'amount': product.amount,
                 'value': product.value,

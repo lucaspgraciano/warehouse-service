@@ -4,7 +4,7 @@ from app.domain import User
 class UserMapper:
     @staticmethod
     def to_domain(user_dict):
-        return User(oid=user_dict.get('oid'),
+        return User(oid=user_dict.get('_id'),
                     name=user_dict.get('name'),
                     created_at=user_dict.get('createdAt'))
 

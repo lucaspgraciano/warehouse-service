@@ -1,5 +1,6 @@
-fastapi
-pymongo
-python-dotenv
-uvicorn
-pydantic
+fastapi==0.70.0
+pymongo==4.0.1
+python-dotenv==0.19.2
+uvicorn==0.16.0
+pydantic==1.8.2
+python-slugify==5.0.2
