@@ -1,7 +1,7 @@
 # Warehouse Serivce
 
 ## Overview
-Server-side of an inventory control application.
+REST API using FastAPI framework.
 
 ## Execution guide
 
